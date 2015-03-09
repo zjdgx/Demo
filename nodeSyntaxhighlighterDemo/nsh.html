@@ -1,0 +1,99 @@
+
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="zjdgx"/>
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <meta name="description" content="nodejs redis."/>
+    <meta name="date" content="20150309"/>
+    <title>nodejs redis</title>
+    <!-- InstanceEndEditable -->
+    <!-- InstanceBeginEditable name="head" -->
+    <link rel="stylesheet" href="../common/style/coolcode.css">
+    <style type="text/css">
+        html, body {
+            background-color: #fff;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .main {
+            font: 12px/1.8 'microsoft yahei', courier new, times new roman;
+        }
+
+        .code {
+            margin: 0;
+            padding: 5px 10px;
+            background-color: #99CCCC;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        pre.code {
+            margin: 0.5em 0;
+            line-height: 150%;
+            padding: 0.4em 0.6em;
+        }
+
+        ol li {
+            list-style: decimal;
+        }
+    </style>
+    <!-- InstanceEndEditable -->
+</head>
+<body>
+<div class="main">
+    <!-- InstanceBeginEditable name="content" -->
+		<ol>
+			<li>
+				<h2>设置模板引擎</h2>
+				<pre>
+					app.set('view engine', 'jade');
+				</pre>
+			</li>
+			<li>
+				<h2>设置视图目录</h2>
+				<pre>
+					app.set('views', path.join(__dirname, 'views');
+				</pre>
+			</li>
+			<li>
+				<h2>文件压缩</h2>
+				<pre>
+					// express middleware: https://github.com/expressjs/compression
+					app.use(compression());
+				</pre>
+			</li>
+			<li>
+				<h2>设置静态文件目录</h2>
+				<pre>
+					app.use(express.static(path.join(__dirname, 'static')));
+				</pre>
+			</li>
+			<li>
+				<h2>设置route</h2>
+				<pre>
+					app.get('/***', function(){*****);
+					app.post('/***', function(){*****);
+					......
+				</pre>
+			</li>
+			<li>
+				<h2>设置应用启动端口</h2>
+				<pre>
+					app.listen(myport, function() {
+						var server = app.address.host,
+							port = app.address.port;
+						
+						console.log('server started on http://%s:%s', server, port);
+					});
+				</pre>
+			</li>
+		</ol>
+    <!-- InstanceEndEditable -->
+</div>
+</body>
+<!-- InstanceEnd -->
+</html>
